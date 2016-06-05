@@ -1,10 +1,9 @@
 __author__ = 'frankhe'
-""" this script shows the actions in openAI gym are different from the actions in DQN paper wich used ALE too"""
-""" https://github.com/openai/gym/blob/master/gym/envs/atari/atari_env.py """
+""" this script shows the actions in openAI gym are different from the actions in DQN paper which used ALE too"""
+""" https://github.com/openai/gym/blob/master/gym/envs/atari/atari_env.py (read line 16 59 137) """
 from atari_py import *
 
 ale = ALEInterface()
-
 ale.loadROM(get_game_path('breakout'))
 print(ale.getMinimalActionSet())
 
@@ -14,7 +13,8 @@ print(ale.getMinimalActionSet())
 Here are the results in this script:
 [ 0  1  3  4 11 12]
 [0 2 3 4 5 6 7 8 9]
-
+!! notice that the actions are not from 0 to n-1, therefore the sample() function in
+https://github.com/openai/gym/blob/master/gym/spaces/discrete.py is probably not right!!
 Next are the results in DQN paper: (The differences are in line 59, 137)
 
 parallels@ubuntu:~/Github/DeepMind-Atari-Deep-Q-Learner$ ./run_cpu breakout
