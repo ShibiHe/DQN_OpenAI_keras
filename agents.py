@@ -40,7 +40,7 @@ class DqnAgent(object):
         NS = Input(p['input_shape'], name='input_next_sate')
 
         self.Q_model = self.build_cnn_model(p)
-        self.Q_old_model = self.build_cnn_model(p, False)
+        self.Q_old_model = self.build_cnn_model(p, False)  # Q hat in paper
         self.Q_old_model.set_weights(self.Q_model.get_weights())  # Q' = Q
 
         Q_S = self.Q_model(S)  # batch * actions
