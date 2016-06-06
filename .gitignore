@@ -1,5 +1,5 @@
 
-.idea
+dir_to_ignore/.idea
 
 *.pyc
 
