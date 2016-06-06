@@ -1,6 +1,6 @@
 __author__ = 'frankhe'
 """ this script shows the actions in openAI gym are different from the actions in DQN paper which used ALE too"""
-""" https://github.com/openai/gym/blob/master/gym/envs/atari/atari_env.py (read line 16 59 137) """
+""" https://github.com/openai/gym/blob/master/gym/envs/atari/atari_env.py (read line 16 61 139) """
 from atari_py import *
 
 ale = ALEInterface()
@@ -15,6 +15,8 @@ Here are the results in this script:
 [0 2 3 4 5 6 7 8 9]
 !! notice that the actions are not from 0 to n-1, therefore the sample() function in
 https://github.com/openai/gym/blob/master/gym/spaces/discrete.py is probably not right!!
+UPDATE: after checking the source code the function is right, and OpenAI uses frame skipping originally.
+
 Next are the results in DQN paper: (The differences are in line 59, 137)
 
 parallels@ubuntu:~/Github/DeepMind-Atari-Deep-Q-Learner$ ./run_cpu breakout

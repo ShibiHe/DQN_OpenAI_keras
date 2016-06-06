@@ -9,12 +9,10 @@ import gym
 game_env = gym.make(parameters.game_name)
 
 parameters.game_action_space = game_env.action_space
-print(game_env.action_space)
-raw_input()
 parameters.game_observation_space = game_env.observation_space
 
 parameters.init_network_parameters()
-agent = DQN_Agent(parameters.NN_parameters)
+agent = DqnAgent(parameters.NN_parameters)
 
 training_step = 0
 for episode in range(parameters.training_episodes):
