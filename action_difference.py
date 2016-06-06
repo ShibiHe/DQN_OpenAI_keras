@@ -10,7 +10,7 @@ print(ale.getMinimalActionSet())
 ale.loadROM(get_game_path('ms_pacman'))
 print(ale.getMinimalActionSet())
 """
-Here are the results in this script:
+Here are the results in this script:a
 [ 0  1  3  4 11 12]
 [0 2 3 4 5 6 7 8 9]
 !! notice that the actions are not from 0 to n-1, therefore the sample() function in
