@@ -52,10 +52,16 @@ Another finding is action difference described in `action_difference.py`
 [jietang]: https://github.com/jietang
 [gdb]: https://github.com/gdb
 
+##Notes
+Sometimes we need to know current lives in atari games. So I sent a pull request to OpenAI gym. <https://github.com/openai/gym/pull/163>
+
 ##Incomplete Functions:
 experience relay
+
 Prioritized Experience Replay
+
 double DQN
+
 dueling DQN
 
 ##References

@@ -2,7 +2,6 @@ __author__ = 'frankhe'
 """ this script shows the actions in openAI gym are different from the actions in DQN paper which used ALE too"""
 """ https://github.com/openai/gym/blob/master/gym/envs/atari/atari_env.py (read line 16 61 139) """
 from atari_py import *
-
 ale = ALEInterface()
 ale.loadROM(get_game_path('breakout'))
 print(ale.getMinimalActionSet())
