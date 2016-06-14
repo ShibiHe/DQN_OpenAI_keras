@@ -7,11 +7,15 @@ class Test(object):
     game_list = ['Breakout-v0', 'MsPacman-v0', 'AirRaid-v0']
     game_name = game_list[1]
 
+    epsilon_start = 1.0
+    epsilon_end = 0.1
+    epsilon_decay = 1000000
+
     game_action_space = None
     game_observation_space = None
 
-    no_op_start = 10
-    random_start = None
+    no_op_start = None
+    random_start = 30
 
     remove_flickering = 4
     frame_skip = 4

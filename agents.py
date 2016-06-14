@@ -16,6 +16,10 @@ class DqnAgent(object):
         self.Q_func = None
         self.build_model(parameters)
 
+        self.states = []
+        self.actions = []
+        self.rewards = []
+
     @staticmethod
     def build_cnn_model(p, trainable=True):
         cnn_model = Sequential()
@@ -84,7 +88,11 @@ class DqnAgent(object):
     def update_Q_model(self):
         self.Q_old_model.set_weights(self.Q_model.get_weights)
 
+    def act(self):
+        pass
+
 if __name__ == '__main__':
     param = dict(input_shape=(4, 84, 84), num_actions=5, output_shape=5, learning_rate = 0.01, discount=0.99)
     agent = DqnAgent(param)
+    print(agent.Q_model.summary())
 
