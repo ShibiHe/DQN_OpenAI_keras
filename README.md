@@ -1,7 +1,7 @@
 # DQN_OpenAI_keras
 This is the DQN implementation written by myself using OpenAI gym and keras.
 
-##### The project is still under construction!
+##### The project has been officially abandoned. But! I have built another more powerful project containing DQN and episodic control, please go there and have a look [Model-Free-Episodic-Control](https://github.com/ShibiHe/Model-Free-Episodic-Control)
 
 ##Description
 
